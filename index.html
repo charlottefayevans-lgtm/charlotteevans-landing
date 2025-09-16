@@ -1,541 +1,262 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Charlotte Evans Coaching</title>
-
     <style>
-
         * {
-
             margin: 0;
-
             padding: 0;
-
             box-sizing: border-box;
-
         }
-
         
-
         body {
-
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
             line-height: 1.6;
-
             color: #333;
-
             background: linear-gradient(135deg, #9c8d5d 0%, #9f9480 100%);
-
             min-height: 100vh;
-
         }
-
         
-
         .container {
-
             max-width: 800px;
-
             margin: 0 auto;
-
             padding: 40px 20px;
-
         }
-
         
-
         .card {
-
             background: rgba(255, 255, 255, 0.95);
-
             backdrop-filter: blur(10px);
-
             border-radius: 20px;
-
             padding: 60px 50px;
-
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-
             text-align: center;
-
             border: 3px solid #D4AF37;
-
         }
-
         
-
         .profile-section {
-
             margin-bottom: 40px;
-
         }
-
         
-
         .profile-image {
-
             width: 180px;
-
             height: 180px;
-
             border-radius: 50%;
-
             margin: 0 auto 30px;
-
             background-size: cover;
-
             background-position: center;
-
             border: 4px solid #D4AF37;
-
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-
             background-image: url('charlotte.png');
-
             background-color: #9c8d5d;
-
         }
-
         
-
         .logo-text {
-
             font-family: 'Georgia', serif;
-
             font-style: italic;
-
             font-size: 2em;
-
             color: #9c8d5d;
-
             margin-bottom: 20px;
-
             text-align: left;
-
             max-width: 200px;
-
             margin-left: 0;
-
         }
-
         
-
         h1 {
-
             font-size: 2.5em;
-
             color: #2c3e50;
-
             margin-bottom: 15px;
-
             font-weight: 300;
-
         }
-
         
-
         .subtitle {
-
             font-size: 1.3em;
-
             color: #1fb1bb;
-
             margin-bottom: 30px;
-
             font-weight: 500;
-
         }
-
         
-
         .description {
-
             font-size: 1.1em;
-
             color: #555;
-
             margin-bottom: 30px;
-
             line-height: 1.8;
-
         }
-
         
-
         .status-badge {
-
             display: inline-block;
-
             background: linear-gradient(135deg, #1fb1bb, #17a2ab);
-
             color: white;
-
             padding: 12px 24px;
-
             border-radius: 25px;
-
             font-weight: 500;
-
             margin-bottom: 30px;
-
             font-size: 1em;
-
         }
-
         
-
         .expertise-section {
-
             background: linear-gradient(135deg, #f8f7f4, #f1f0ed);
-
             border-radius: 15px;
-
             padding: 30px;
-
             margin: 30px 0;
-
             border: 2px solid #D4AF37;
-
         }
-
         
-
         .expertise-section h3 {
-
             color: #9c8d5d;
-
             margin-bottom: 20px;
-
             font-size: 1.4em;
-
             font-weight: 600;
-
         }
-
         
-
         .expertise-list {
-
             list-style: none;
-
             text-align: left;
-
         }
-
         
-
         .expertise-list li {
-
             padding: 8px 0;
-
             color: #555;
-
             position: relative;
-
             padding-left: 25px;
-
         }
-
         
-
         .expertise-list li:before {
-
             content: "✓";
-
             position: absolute;
-
             left: 0;
-
             color: #1fb1bb;
-
             font-weight: bold;
-
         }
-
         
-
         .contact-section {
-
             margin-top: 40px;
-
         }
-
         
-
         .contact-button {
-
             display: block;
-
             background: linear-gradient(135deg, #9c8d5d, #9f9480);
-
             color: white;
-
             padding: 15px 30px;
-
             text-decoration: none;
-
             border-radius: 30px;
-
             font-weight: 500;
-
             margin: 15px auto;
-
             max-width: 250px;
-
             text-align: center;
-
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-
             border: 2px solid #D4AF37;
-
         }
-
         
-
         .contact-button:hover {
-
             transform: translateY(-2px);
-
             box-shadow: 0 10px 20px rgba(156, 141, 93, 0.3);
-
         }
-
         
-
         .linkedin-button {
-
             background: linear-gradient(135deg, #1fb1bb, #17a2ab);
-
             border: 2px solid #1fb1bb;
-
         }
-
         
-
         .linkedin-button:hover {
-
             box-shadow: 0 10px 20px rgba(31, 177, 187, 0.3);
-
         }
-
         
-
         .tidycal-button {
-
             background: linear-gradient(135deg, #D4AF37, #B8941A);
-
             border: 2px solid #9c8d5d;
-
         }
-
         
-
         .tidycal-button:hover {
-
             box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
-
         }
-
         
-
         .footer {
-
             margin-top: 40px;
-
             padding-top: 30px;
-
             border-top: 2px solid #D4AF37;
-
             color: #9c8d5d;
-
             font-size: 0.9em;
-
         }
-
         
-
-        .decorative-accent {
-
-            width: 60px;
-
-            height: 4px;
-
-            background: linear-gradient(90deg, #D4AF37, #1fb1bb);
-
-            margin: 20px auto;
-
-            border-radius: 2px;
-
-        }
-
-        
-
         @media (max-width: 768px) {
-
             .card {
-
                 padding: 40px 30px;
-
             }
-
             
-
             h1 {
-
                 font-size: 2em;
-
             }
-
             
-
             .subtitle {
-
                 font-size: 1.1em;
-
             }
-
             
-
             .contact-button {
-
                 margin: 10px auto;
-
             }
-
             
-
             .logo-text {
-
                 text-align: center;
-
                 margin-left: auto;
-
             }
-
         }
-
     </style>
-
 </head>
-
 <body>
-
     <div class="container">
-
         <div class="card">
-
             <div class="profile-section">
-
                 <div class="logo-text">Let's talk...</div>
 
-                <div class="decorative-accent"></div>
-
-                
-
                 <div class="profile-image"></div>
-
                 
-
                 <h1>Charlotte Evans</h1>
-
                 <p class="subtitle">Leadership Coach & Culture Consultant</p>
-
                 
-
                 <div class="status-badge">
-
                     Currently Working in New Role
-
                 </div>
-
                 
-
                 <p class="description">
-
                     Registered Nurse and former domiciliary care business owner specialising in conscious leadership for health and social care professionals. I help leaders break free from reactive firefighting and create thriving, sustainable cultures that support retention, wellbeing, and purposeful growth.
-
                 </p>
-
             </div>
-
             
-
             <div class="expertise-section">
-
                 <h3>My Expertise</h3>
-
                 <ul class="expertise-list">
-
                     <li>Conscious leadership development for healthcare professionals</li>
-
                     <li>Creating supportive cultures that improve staff retention</li>
-
                     <li>Building resilience and sustainable growth for teams</li>
-
                     <li>Aligning business goals with people-first approaches</li>
-
                     <li>Supporting leaders to move from overwhelmed to empowered</li>
-
                 </ul>
-
             </div>
-
             
-
             <div class="contact-section">
-
                 <h3 style="color: #9c8d5d; margin-bottom: 20px;">Connect With Me</h3>
-
                 <div class="decorative-accent"></div>
-
                 
-
                 <a href="mailto:charlottefayevans@gmail.com" class="contact-button">
-
                     📧 Email Me
-
                 </a>
-
                 
-
                 <a href="https://linkedin.com/in/charlotteevans" class="contact-button linkedin-button">
-
                     💼 LinkedIn Profile
-
                 </a>
-
                 
-
                 <a href="https://tidycal.com/charlotteevans" class="contact-button tidycal-button">
-
                     📅 Book a Call
-
                 </a>
-
             </div>
-
             
-
             <div class="footer">
-
                 <p>© 2025 Charlotte Evans Coaching. All rights reserved.</p>
-
                 <p>Empowering health and social care leaders to lead consciously, retain purposefully, and grow sustainably.</p>
-
             </div>
-
         </div>
-
     </div>
-
 </body>
-
 </html>
